@@ -804,7 +804,7 @@ button {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  margin: 0 10px;
+  margin: 0 auto;
 }
 .projects .container .projects__text-inner {
   display: flex;
