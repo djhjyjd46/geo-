@@ -1,0 +1,23 @@
+@import 
+  'global/media',
+  'global/mixins',
+  'variables',
+  'global/normolize',
+  'global/fonts',
+  'global/utils',
+  'global/globals';
+
+  // Здесь импорт компонентов
+  @import
+  '../components/_comp-styles';
+  
+  // Здесь можно импортировать блоки
+  @import 
+  'block/_header',
+  'block/_projects',
+  'block/_garant',
+  'block/_service',
+  'block/_partner';
+  // 'block/footer',
+
+  

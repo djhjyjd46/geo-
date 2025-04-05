@@ -1,0 +1,86 @@
+.service {
+    background-color: white;
+    padding: 112px 0;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+
+        .text-block {
+            display: grid;
+            grid-template-columns: repeat(2, calc(50% - 12px));
+            justify-content: space-between;
+            @media (max-width: $mobile) {
+              display: flex;
+              flex-direction: column;
+            }
+            h2 {}
+
+            p {
+                @include fluid-text(16, 16);
+            }
+
+            margin-bottom: 56px;
+        }
+
+        .cards_list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            justify-content: space-between;
+            @media (max-width: $mobile) {
+              flex-direction: column;
+            }
+           
+
+            .card {    
+                width: calc(50% - 12px);
+                border: 1px solid rgba(221, 221, 221, 1);
+                background-color: rgba(247, 249, 249, 1);
+                display: flex;
+                flex-direction: column;
+                padding: 20px;
+                gap: 12px;
+                justify-content: space-between;
+                @media (max-width: $mobile) {
+                  width: 100%;
+                }
+                h3{
+
+                }
+                ul{
+                    list-style-type: disc;
+                    li{
+                        position: relative;
+                        margin-bottom: 5px;
+                        left: 20px;
+                    }
+                }
+
+                button{
+                        color: $blue;
+                        @include reset-button;
+                        width: 100%;
+                        border: solid 1px $blue;     
+                        &:hover{
+                            background-color: $blue-hover;
+                            color: $white;
+                        }           
+                }
+            }           
+            .card-inner{
+                display: flex;
+                flex-direction: column;
+                width: calc(50% - 12px);
+                gap: 24px;
+                @media (max-width: $mobile) {
+                    width: 100%;
+                  }
+                .card{
+                    width:100%;
+                }
+            }  
+
+        }
+    }
+}

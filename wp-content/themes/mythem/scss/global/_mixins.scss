@@ -1,0 +1,89 @@
+@use "sass:math";
+
+/**
+ * SCSS миксины.
+ * Содержит многоразовые блоки стилей:
+ * - Типографские утилиты (адаптивный текст)
+ * - Сбросы стилей (кнопки, ссылки)
+ * - Часто используемые стили (flex-center, visually-hidden)
+ * - Вспомогательные функции для компонентов
+ */
+
+/**
+ * Создает адаптивный текст, который изменяет размер в зависимости от ширины экрана
+ * @param {number} $max - Максимальный размер текста в пикселях (для десктопа)
+ * @param {number} $min - Минимальный размер текста в пикселях (для мобильного)
+ *
+ * Использование: @include fluid-text(48, 24);
+ */
+
+ 
+@mixin fluid-text($max: 40, $min: 14) {
+  font-size: clamp(#{$min}px, #{math.div($max, 1920) * 100}vw, #{$max}px);
+}
+
+/**
+ * Сбрасывает стандартные стили ссылок
+ * Убирает подчеркивание и наследует цвет от родителя
+ *
+ * Использование: @include reset-link;
+ */
+@mixin reset-link {
+  color: inherit;
+
+  &,
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+/**
+ * Сбрасывает стандартные стили кнопок
+ * Убирает отступы, фон и границы
+ *
+ * Использование: @include reset-button;
+ */
+@mixin reset-button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+/**
+ * Центрирует содержимое с помощью flexbox
+ * @param {boolean} $isInline - Использовать inline-flex вместо flex
+ *
+ * Использование: @include flex-center();
+ * Использование: @include flex-center(true);
+ */
+@mixin flex-center($isInline: false) {
+  @if $isInline {
+    display: inline-flex;
+  } @else  {
+    display: flex;
+  }
+
+  justify-content: center;
+  align-items: center;
+}
+
+
+/**
+ * Визуально скрывает элемент, но сохраняет доступность для скринридеров
+ * Используется для элементов, которые должны быть доступны через клавиатуру
+ * но не должны отображаться визуально
+ *
+ * Использование: @include visually-hidden;
+ */
+@mixin hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}

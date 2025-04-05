@@ -1,0 +1,28 @@
+button {
+    width: $button-width;
+    height: $button-height;
+    background-color: $button-background;
+    border-radius: $button-radius;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $button-color;
+    transition: 0.3s  ease-in-out;
+    font-size: $button-size;
+    
+@media (min-width: $tablet) {
+      
+  &:hover {
+      background-color: $button-hover;
+      
+  } 
+    }
+  @media (max-width: $mobile) {
+    width: 100%;
+    &:hover,
+        &:active {
+            background-color: none; // Возвращаем цвет по умолчанию
+            outline: none; // Убираем обводку при фокусе
+        }
+  }
+}

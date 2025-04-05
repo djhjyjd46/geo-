@@ -1,0 +1,49 @@
+
+$desktop: 1280px;        // Стандартные десктопы и выше
+
+$tablet-above: 1024px;   // Маленькие десктопы и выше
+$tablet: 1200px;         // Планшеты и ниже
+
+$mobile-above: 768px;    // Маленькие планшеты и выше
+$mobile: 767px;          // Мобильные устройства и ниже
+
+
+
+//Стили для больших десктопов (больше 1280px)
+
+
+
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+
+
+
+//Стили для планшетов и меньше (1023px и ниже)
+
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+//Стили для маленьких планшетов и выше (768px и выше)
+
+@mixin mobile-above {
+  @media (min-width: $mobile-above) {
+    @content;
+  }
+}
+
+// Стили для мобильных устройств (767px и ниже)
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+

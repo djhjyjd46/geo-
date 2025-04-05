@@ -1,0 +1,151 @@
+.header {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: $black;
+    margin-bottom: 112px;
+
+    @media (max-width: $mobile) {
+        margin-bottom: 56px;
+    }
+
+
+    &__top {
+        background-color: rgba(255, 255, 255, 0.7);
+
+
+        @media (max-width: $mobile) {
+            height: 56px;
+        }
+
+        .container {
+            @media (max-width: $mobile) {
+                height: 56px;
+                margin-bottom: 56px;
+            }
+
+            margin-bottom: 0;
+            justify-content: space-between;
+            height: 92px;
+            padding: 10px;
+
+            .logo {
+                z-index: 10;
+
+                @media (max-width: $mobile) {
+                    width: 193px;
+                    height: 32px;
+
+                }
+            }
+
+            .top-inner {
+                flex-direction: column;
+                width: 739px;
+                height: 57px;
+                font-weight: 600;
+                font-size: 16px;
+                justify-content: space-between;
+                gap: 14px;
+
+
+                .nav-phone {
+                    justify-content: space-between;
+
+
+                    .phone-inner {
+                        justify-content: space-between;
+                        gap: 42px;
+
+                        .phone-box {
+                            gap: 4px;
+
+                            span {
+                                margin-left: 6px;
+                                font-weight: 400;
+                                font-size: 14.97px;
+                                text-transform: lowercase;
+                            }
+                        }
+                    }
+                }
+
+                .nav-menu {
+                    text-transform: uppercase;
+
+                    ul {
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: 16px;
+                    }
+                }
+
+                .phone-link {
+                    font-size: 16px;
+                    color: $blue;
+
+                }
+            }
+
+        }
+
+
+    }
+
+    &__hero {
+        margin-top: 97px;
+
+        height: 100vh;
+
+        @media (max-width: $mobile) {
+            margin-top: 56px;
+            background: linear-gradient(279.2deg, rgba(255, 255, 255, 0) 37.96%, rgba(255, 255, 255, 0.3) 73.97%),
+                linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+            backdrop-filter: blur(1px)
+        }
+
+        .text-inner {
+            margin-top: 32px;
+            max-width: 600px;
+
+            h1 {
+                margin-bottom: 20px;
+
+                @media (max-width: $mobile) {
+                    margin-bottom: 10px;
+                }
+            }
+
+            h2 {
+                margin-bottom: 44px;
+                @include fluid-text(33, 20);
+
+                @media (max-width: $mobile) {
+                    margin-bottom: 24px;
+                }
+            }
+
+            p {
+                font-size: 18px;
+                margin-bottom: 44px;
+                max-width: 414px;
+
+                @media (max-width: $mobile) {
+                    margin-bottom: 24px;
+                }
+            }
+
+            button {}
+        }
+    }
+
+}
+
+.container,
+.top-inner,
+.nav-phone,
+.phone-inner,
+.phone-box {
+    display: flex;
+}

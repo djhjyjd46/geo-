@@ -1,0 +1,110 @@
+.projects {
+    padding: 80px 0;
+    position: relative;
+    display: flex;
+    height: 923px;
+
+    @media (max-width: $mobile) {
+        height: 874px;
+        padding: 56px 0;
+    }
+
+    .container {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+margin: 0 10px;
+
+        .projects__text-inner {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 56px;
+
+            @media (max-width: $mobile) {
+                flex-direction: column;
+            }
+
+            h2 {
+                @media (max-width: $mobile) {
+                    width: 100%;
+                }
+
+                width: calc(50% - 12px);
+            }
+
+            p {
+                width: calc(50% - 12px);
+                @include fluid-text(16, 16);
+
+                @media (max-width: $mobile) {
+                    width: 100%;
+                }
+
+            }
+        }
+
+        .slider {
+            position: relative;
+            width: 100%;
+
+            img {
+                // margin-bottom: 20px;
+            }
+
+            .text-inner {
+                min-height: 200px;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+
+                p {
+                    color: $blue;
+                    font-style: italic;
+                }
+
+            }
+
+            .swiper-container {
+
+
+                .swiper-slide {
+                    text-align: left;
+                    width: 384px;
+                    height: 438px;
+                    display: flex;
+                    flex-direction: column;
+                    background-color: white;
+                    .text-inner{
+                        padding: 20px;
+                        @media (max-width: $mobile) {
+                          padding: 10px;
+                        }
+                    }
+                    @media (max-width: $mobile) {
+                        height: 400;
+                    }
+                }
+
+            }
+        }
+
+        .swiper-btn-box {
+            display: flex;
+            position: absolute;
+            z-index: 20;
+            gap: 24px;
+            bottom: 112px;
+            left: 50%;
+            transform: translate(-50%);
+
+            @media (max-width: $mobile) {
+                bottom: 56px;
+
+            }
+
+            .project-garant-swiper-button-prev,
+            .project-swiper-button-next {}
+        }
+    }
+}

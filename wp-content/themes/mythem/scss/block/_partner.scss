@@ -1,0 +1,48 @@
+.partner {
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: $mobile) {
+          gap: 24px;
+        }
+
+
+        .text-inner,
+        .block-inner {            
+            width: 588px;
+            @media (max-width: $mobile) {
+              width: 100%;
+            }
+        }
+
+        .text-inner {
+            @include fluid-text(18, 18);
+
+            h2 {
+                margin-bottom: 24px;
+            }
+        }
+        .block-inner{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            @media (max-width: $mobile) {
+              gap: 12px;
+            }
+            .card{
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                padding: 10px 16px;
+                width: 282px;
+                background-color: white;
+                @media (max-width: $mobile) {
+                  width: 100%;
+                }
+            }
+        }
+    }
+}

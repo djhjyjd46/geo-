@@ -1,0 +1,42 @@
+.custom-checkbox {
+    display: flex;
+    color: $black;
+    cursor: pointer;
+
+    input {
+        display: none; 
+    }
+
+    span {
+        display: inline-block;
+        min-width: 20px;
+        height: 20px;
+        border: 2px solid $black;
+        border-radius: 3px; 
+        margin-right: 8px;
+        position: relative;
+        transition: all 0.3s ease-in-out;        
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 1px;
+            left: 5px;
+            width: 6px;
+            height: 10px;
+            border-right: 2px solid $black;
+            border-bottom: 2px solid $black;
+            transform: rotate(45deg);
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
+        }
+    }
+
+    input:checked + span {
+        background: transparent; 
+    }
+
+    input:checked + span::before {
+        opacity: 1;
+    }
+}
