@@ -206,6 +206,7 @@ img {
 a {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
 h1, .h1 {
@@ -515,7 +516,7 @@ button {
   /* Скрыть модальное окно по умолчанию */
   position: fixed;
   /* Оставаться на месте */
-  z-index: 1;
+  z-index: 100;
   /* Сидеть на вершине */
   left: 0;
   top: 0;
@@ -532,16 +533,19 @@ button {
   width: 100%;
   height: 100%;
   padding: 56px 10px 10px;
-  background-color: rgb(238, 240, 243);
+  background-color: rgb(251, 251, 251);
+}
+.modal-content .modal_thnx {
+  height: 324px;
 }
 @media (min-width: 767px) {
   .modal-content {
-    position: absolute;
-    top: 20vh;
+    position: fixed;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%);
+    transform: translate(-50%, -50%);
     padding: 46px;
-    width: 600px;
+    width: 670px;
     height: auto;
   }
 }
@@ -550,10 +554,15 @@ button {
     width: 100%;
   }
 }
+.modal-content a {
+  text-decoration: underline;
+}
 
 .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
   color: #aaa;
-  float: right;
   font-size: 28px;
   font-weight: bold;
 }
@@ -565,15 +574,29 @@ button {
   cursor: pointer;
 }
 
+.modal-policy .modal-content {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  overflow-y: auto;
+}
+@media (max-width: 767px) {
+  .modal-policy .modal-content {
+    width: 100%;
+    height: 100vh;
+  }
+}
+.modal-policy .modal-content button {
+  margin-inline: auto;
+}
+
 .modal-phone h2 {
-  font-weight: 300;
-  font-size: 36px;
-  line-height: 100%;
-  margin-bottom: 20px;
+  font-size: clamp(24px, 1.875vw, 36px);
+  text-transform: uppercase;
+  text-align: center;
 }
 .modal-phone p {
-  font-weight: 300;
-  line-height: 130%;
+  text-align: center;
   margin-bottom: 32px;
 }
 .modal-phone form {
@@ -582,8 +605,9 @@ button {
   gap: 16px;
 }
 .modal-phone form input {
-  border: 1px solid rgb(213, 216, 217);
+  border: 1px solid rgb(238, 242, 243);
   width: auto;
+  background-color: rgb(255, 255, 255);
   height: 64px;
   padding: 23px;
 }
@@ -898,6 +922,7 @@ button {
 }
 .footer .container .footer__inner .left a,
 .footer .container .footer__inner .right a {
+  cursor: pointer;
   font-size: clamp(16px, 0.8333333333vw, 16px);
 }
 @media (max-width: 767px) {

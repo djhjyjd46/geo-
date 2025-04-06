@@ -38,6 +38,7 @@
                 flex-direction: column;
                 gap: 10px;
                 a{
+                    cursor: pointer;
                     @include fluid-text(16, 16);
                     @media (max-width: $mobile) {
                         align-items: center;                      

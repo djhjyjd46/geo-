@@ -5,6 +5,7 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php wp_title('|', true, 'right'); ?></title>
+    <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/images/favicon.png">
     <?php wp_head(); ?>
 </head>
 
@@ -21,30 +22,30 @@
                         <div class="phone-inner">
                             <div class="phone-box">
                                 <img src="<?php echo get_template_directory_uri(); ?>/images/icons/phone.svg" alt="phone">
-                                <a href="tel:+375173514040">+375 17 351-40-40</a>
+                                <a href="tel:+375173514040"><?= the_field('phone-1', 'option'); ?></a>
                                 <span>тел/факс</span>
                             </div>
                             <div class="phone-box">
                                 <img src="<?php echo get_template_directory_uri(); ?>/images/icons/phone.svg" alt="phone">
-                                <a href="tel:+375173514040">+375 17 351-40-40</a>
+                                <a href="tel:+375173514040"><?= the_field('phone-2', 'option'); ?></a>
                             </div>
                         </div>
-                        <a class="phone-link" href="tel:+375173514040">Заказать звонок</a>
+                        <a class="phone-link openModalPhone">Заказать звонок</a>
                     </div>
                     <nav class="nav-menu">
                         <ul>
-                            <li><a href="#">О&nbsp;компании</a></li>
-                            <li><a href="#">Услуги</a></li>
-                            <li><a href="#">Проекты</a></li>
-                            <li><a href="#">Сертификаты</a></li>
-                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#partner">О&nbsp;компании</a></li>
+                            <li><a href="#service">Услуги</a></li>
+                            <li><a href="#projects">Проекты</a></li>
+                            <li><a href="#garant">Сертификаты</a></li>
+                            <li><a href="#contacts">Контакты</a></li>
                         </ul>
                 </div>
             </div>
         </div>
         <div class="mobile visible-mobile">
             <div class="mobile__logo">
-                <img class="" src="<?php echo get_template_directory_uri(); ?>/images/header-logo.png" alt="<?php bloginfo('name'); ?>">
+                <img class="" src="<?= get_template_directory_uri(); ?>/images/header-logo.png" alt="<?php bloginfo('name'); ?>">
             </div>
             <div class="mobile__mobile-buttons ">
                 <button class="phone-icon" id="phoneToggle"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"
@@ -64,24 +65,24 @@
             <div class="mobile-inner">
                 <nav class="mobile-menu" id="mobileMenu">
                     <ul>
-                        <li><a href="#">О&nbsp;КОМПАНИИ</a></li>
-                        <li><a href="#">УСЛУГИ</a></li>
-                        <li><a href="#">ПРОЕКТЫ</a></li>
-                        <li><a href="#">СЕРТИФИКАТЫ</a></li>
-                        <li><a href="#">КОНТАКТЫ</a></li>
+                        <li><a href="#partner">О&nbsp;компании</a></li>
+                        <li><a href="#service">Услуги</a></li>
+                        <li><a href="#projects">Проекты</a></li>
+                        <li><a href="#garant">Сертификаты</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
                     </ul>
                 </nav>
                 <nav class="phone-menu" id="phoneMenu">
                     <ul>
                         <li> <img src="<?php echo get_template_directory_uri(); ?>/images/icons/phone.svg" alt="phone">
-                            <a href="tel:+375173514040">+375 17 351-40-40</a>
+                            <a href="tel:+375173514040"><?= the_field('phone-1', 'option'); ?></a>
                             <span>тел/факс</span>
                         </li>
                         <li><img src="<?php echo get_template_directory_uri(); ?>/images/icons/phone.svg" alt="phone">
-                            <a href="tel:+375173514040">+375 17 351-40-40</a>
+                            <a href="tel:+375173514040"><?= the_field('phone-2', 'option'); ?></a>
                         </li>
                     </ul>
-                    <button type="button">Заказать звонок</button>
+                    <button class="openModalPhone" type="button">Заказать звонок</button>
                 </nav>
             </div>
         </div>
@@ -91,9 +92,10 @@
                 <h1>ИНЖЕНЕРНО-ГЕОДЕЗИЧЕСКИЕ РАБОТЫ</h1>
                 <h2>В&nbsp;Беларуси и&nbsp;странах СНГ</h2>
                 <p>Комплексное геодезическое обеспечение в&nbsp;период строительства и&nbsp;эксплуатации</p>
-                <button>Получить консультацию</button>
+                <button class="openModalPhone" >Получить консультацию</button>
             </div>
         </div>
     </header>
 </body>
+
 </html>

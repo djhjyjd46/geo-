@@ -14,9 +14,8 @@
             </span>
             <h2>Политика конфенденциальности</h2>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem placeat vel aut nulla beatae, rerum nemo
-                deleniti libero dolore nostrum, sunt ab voluptatum officiis voluptatibus rem similique. Illo, odio
-                illum.
+                <?= the_field('politika', 'option'); ?>
             </p>
+            <button class="close--big" type="button">Закрыть</button>
         </div>
     </div>

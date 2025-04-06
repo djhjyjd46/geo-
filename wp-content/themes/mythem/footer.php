@@ -12,7 +12,7 @@ wp_footer();?>
             </div>
             <div class="right">
                 <a class="policy">Политика обработки персональных данных</a>
-                <a class="policy">Политика куки</a>
+                <a class="policyCookie">Политика куки</a>
             </div>
         </div>
     </div>

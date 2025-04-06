@@ -34,7 +34,7 @@
         </div>
 
 </section>
-<section class="service">
+<section id="service" class="service">
     <div class="container">
         <div class="text-block">
             <h2>Полный комплекс геодезических услуг</h2>
@@ -51,7 +51,7 @@
                     <li>Крены и&nbsp;деформации</li>
                     <li>Сжатия</li>
                 </ul>
-                <button type="button">Получить консультацию</button>
+                <button class="openModalConsult" type="button">Получить консультацию</button>
             </div>
             <div class="card">
                 <h3>Разбивочные геодезические работы</h3>
@@ -62,7 +62,7 @@
                     </li>
                     <li>Вынос в&nbsp;натуру инженерных сетей</li>
                 </ul>
-                <button type="button">Получить консультацию</button>
+                <button class="openModalConsult" type="button">Получить консультацию</button>
             </div>
             <div class="card">
                 <h3>Исполнительные геодезические съемки</h3>
@@ -74,7 +74,7 @@
                     <li>Съемки подкрановых путей и&nbsp;фасадов зданий</li>
                     <li>Вертикальная планировка с&nbsp;вычислением объемов земляных работ</li>
                 </ul>
-                <button type="button">Получить консультацию</button>
+                <button class="openModalConsult" type="button">Получить консультацию</button>
             </div>
             <div class="card-inner">
                 <div class="card">
@@ -82,11 +82,11 @@
                     <ul>
                         <li>Предпроектные и&nbsp;исполнительные съемки</li>
                     </ul>
-                    <button type="button">Получить консультацию</button>
+                    <button class="openModalConsult" type="button">Получить консультацию</button>
                 </div>
                 <div class="card">
                     <h3>Составление проекта производства геодезических работ</h3>
-                    <button type="button">Получить консультацию</button>
+                    <button class="openModalConsult" type="button">Получить консультацию</button>
                 </div>
             </div>
 
@@ -178,14 +178,14 @@
         </div>
     </div>
 </section>
-<section class="contact-form">
+<section id="contact-form" class="contact-form">
     <div class="container">
         <h2>ОСТАВЬТЕ ЗАЯВКУ И&nbsp;МЫ&nbsp;ПЕРЕЗВОНИМ ВАМ В&nbsp;ТЕЧЕНИИ 2&nbsp;МИНУТ</h2>
         <?= get_template_part('components/form'); ?>
 
     </div>
 </section>
-<section class="contacts">
+<section class="contacts" id="contacts">
     <div class="container">
 
         <div class="contacts__inner">
@@ -198,11 +198,11 @@
                 <div class="contacts__inner__block__box">
                     <div class="phone-inner">
                         <div class="phone-box">
-                            <a href="tel:+375173514040">+375 17 351-40-40</a>
+                            <a href="tel:+375173514040"><?= the_field('phone-1', 'option'); ?></a>
                             <span>тел/факс</span>
                         </div>
                     </div>
-                    <a href="tel:+375173514040">+375 17 351-40-40</a>
+                    <a href="tel:+375173514040"><?= the_field('phone-2', 'option'); ?></a>
                 </div>
             </div>
             <div class="contacts__block">
@@ -247,7 +247,9 @@
 
 <?= get_template_part('components/modal-Thnx'); ?>
 <?= get_template_part('components/modal-form'); ?>
+<?= get_template_part('components/modal-form-consult'); ?>
 <?= get_template_part('components/modal-policy'); ?>
+<?= get_template_part('components/modal-policy-cookie'); ?>
 
 
 <?php

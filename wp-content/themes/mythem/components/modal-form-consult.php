@@ -1,4 +1,4 @@
-<div class="modal" id="modalCalForm">
+<div class="modal" id="modalConsult">
         <div class="modal-content">
             <span class="close">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -14,8 +14,8 @@
                 </svg>
             </span>
             <div class="modal-phone">
-                <h2>Заказать звонок</h2>
-                <p>Оставьте ваши контактные данные и мы свяжемся с вами в ближайшее время</p>
+                <h2>Получить консультацию</h2>
+                <p>Для получения подробной информации, оставьте ваши контактные данные и мы свяжемся с вами для консультации</p>
                 <form class="contact-form__form" id="form-2">
                     <input type="text" placeholder="Ваше имя*" required>
                     <input type="tel" placeholder="+375 (__) ___-__-__" required>
@@ -27,7 +27,7 @@
                         <span></span>
                         <p>Согласен (а) на <a class="policy">обработку персональных данных</a></p>
                     </label>
-                    <button type="submit" class="header__contacts-button">Заказать звонок</button>
+                    <button type="submit" class="header__contacts-button">Получить консультацию</button>
                 </form>
             </div>
         </div>
