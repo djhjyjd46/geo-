@@ -3,6 +3,11 @@ const forms = document.querySelectorAll('form'); // Выбираем все фо
 
 if (forms.length > 0) {
     forms.forEach(form => {
+        const mailToInput = form.querySelector('input[value="mail_to"]'); // Проверяем наличие скрытого инпута
+        if (!mailToInput) {
+            return; // Пропускаем формы без инпута mail_to
+        }
+
         const submitBtn = form.querySelector('button[type="submit"]');
 
         form.addEventListener('submit', function (e) {

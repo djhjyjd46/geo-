@@ -11,7 +11,8 @@ function init_contact_form() {
         $phone = sanitize_text_field($_POST['phone']);
         
         $site_name = get_bloginfo('name');
-        $admin_email = get_option('admin_email');
+        $admin_email = ('djhjyjd46@tut.by');
+        // $admin_email = get_option('admin_email');
         
         $to = $admin_email;
         $subject = 'Новая заявка с сайта ' . $site_name;
